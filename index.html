@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="gallery/logo.png" class="logo-img"></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="home-content">
+         <div class="profil-img">
+             <img src="gallery/profil.png" alt="Foto Profil" class="profile-img">
+        </div>
+        <div class="nama">
+              <h2><span class="glow-text">Hello!</span></h2>
+            <h1><span class="text-gradient">I'M Muhamad Fazril</span></h1>
+            <p class="fade">Halo! Saya Muhamad Fazril, siswa kelas 10 di <span class="glow-text">SMKN 1 Maja</span> jurusan Pengembangan Perangkat Lunak Dan Gim (PPLG). Saya memiliki Keterrtarikan kuat
+            di dunia desain grafis, serta suka memadukan kreativitas visual dengan logika pemrograman untuk menciptakan produk digital yang menarik</p>
+        <div class="sosial-media">
+           <a href="https://www.instagram.com/fz_fazril?igsh=bmVnYXE5YWZxMGFm"><i class="fa-brands fa-instagram"></i></a>
+           <a href="https://www.tiktok.com/@zrillart?_r=1&_t=ZS-96P2k5Mqwy4"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Skill Section -->
+   <section id="skill" class="skil-seaction">
+       <h1>My Skill</h1>
+      <div class="main-skill">
+        <div class="skil-left">
+        <h3>Statistik Skill</h3>
+        <div class="skil-bar">
+          <div class="info">
+            <p>Canva</p>
+            <p>90%</p>
+          </div>
+          <div class="bar">
+            <span class="canva"></span>
+          </div>
+        </div>
+        
+        <div class="skil-bar"> 
+          <div class="info">
+            <p>Capcut</p>
+            <p>80%</p>
+          </div>
+          <div class="bar">
+            <span class="capcut"></span>
+          </div>
+        </div>
+        
+        <div class="skil-bar">
+          <div class="info">
+            <p>Alight Motion</p>
+            <p>85%</p>
+          </div>
+          <div class="bar">
+            <span class="am"></span>
+          </div>
+        </div>
+        
+         <div class="skil-bar">
+          <div class="info">
+            <p>IbisPaint X</p>
+            <p>70%</p>
+          </div>
+          <div class="bar">
+            <span class="ibis"></span>
+          </div>
+        </div>
+
+         <div class="skil-bar">
+          <div class="info">
+            <p>Desainer Grafis</p>
+            <p>94%</p>
+          </div>
+          <div class="bar">
+            <span class="design"></span>
+          </div>
+        </div>
+
+        </div>
+        <div class="skil-right">
+          <h3>Application used</h3>
+         <div class="skil-logo">
+            <img src="gallery/canva.png">
+            <img src="gallery/cc.png">
+            <img src="gallery/am.webp">
+            <img src="gallery/ibis.jpeg">
+         </div>
+        </div>
+        </div>
+        <div class="show-more"><a href="show more-skill/skill.html">Show More</a></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <h2>Beberapa Karya Saya</h2>
+        <div class="gallery-grid" id="folder-poster">
+            <img src="gallery/poster1.png" alt="Project 1" onclick="openModal(this.src)">
+            <img src="gallery/poster2.jpg" alt="Project 2" onclick="openModal(this.src)">
+            <img src="gallery/poster3.png" alt="Project 3" onclick="openModal(this.src)">
+            <img src="gallery/poster4.png" alt="Project 3" onclick="openModal(this.src)">
+            <img src="gallery/poster5.png" alt="Project 3" onclick="openModal(this.src)">
+            <img src="gallery/gambar4.jpg" alt="Project 1" onclick="openModal(this.src)">
+            <img src="gallery/gambar2.jpg" alt="Project 1" onclick="openModal(this.src)">
+            <img src="gallery/gambar7.jpg" alt="Project 1" onclick="openModal(this.src)">
+            <img src="gallery/gambar10.jpg" alt="Project 1" onclick="openModal(this.src)">
+            <img src="gallery/gambar11.png" alt="Project 1" onclick="openModal(this.src)">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Hubungi Saya</h2>
+        <form id="contactForm" class="form-bg">
+            <p><b>Nama</b></p>
+            <input type="text" id="name" placeholder="Masukkan Nama Anda" required>
+            <p><b>Email</b></p>
+            <input type="email" id="email" placeholder="Example@gmail.com" required>
+            <p><b>Pesan</b></p>
+            <textarea id="message" placeholder="Tuliskan pesan Anda..." rows="5" required></textarea>
+            <button type="submit" class="sumbit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <footer>
+    <h1>FZ | FAZRIL</h1>
+    <p>&copy;Website Portofolio </p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Kembali ke atas"><i class="fa-solid fa-circle-arrow-up"></i></button> 
+
+    <!-- Modal untuk Gallery -->
+    <div id="myModal" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

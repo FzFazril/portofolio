@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Scroll halus */
+}
+
+body {
+    line-height: 1.6;
+    background-color: #080616;
+}
+
+h2 {
+    color: white;
+     text-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.497);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    color: white;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    opacity: 0.8;
+}
+.logo-img{
+    margin: 0%;
+    padding: 0%;
+    height: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.logo-img:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px white);
+    
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 45px;
+    transition: 0.3s;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.nav-links li a:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 10px #2F2FE4;
+    color: #2F2FE4;
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row; /* Menu berjejer ke samping */
+    justify-content: center;
+    font-size: 0.7rem;
+    align-items: center;
+    width: 100%;
+    height: 10px;
+    padding: 10px 0;
+    border-radius: 8px;
+    gap: 1px;
+  }
+  
+}
+/* Home */
+#home {
+    background-image: url(gallery/bg.jpg);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); /*memberikan efek blender pada foto*/
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation: fadein 2s 1;
+
+}
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
+
+}
+
+.home-content{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-left: 10%;
+    padding: 100px;
+
+}
+.profile-img {
+    display: flex;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 20px black;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+    animation: fadeleft 2s 1;
+    animation:  oscillate 3s infinite;
+    
+}
+.profile-img:hover{
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 0 20px white;
+}
+.nama {
+  display: flex;
+  flex-direction: column;
+    text-align: left;
+    color: white;
+    animation: faderight 2s 1;
+}
+
+.glow-text{
+    color: white;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.text-gradient{
+    background-image: linear-gradient(to right, rgb(255, 0, 238), rgb(0, 0, 252));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sosial-media i {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 8px;
+    border-radius: 50%;
+    margin-top: 10px;
+    width: 45px;
+    height: auto;
+    gap: 45px;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sosial-media {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  gap: 10px;
+}
+.sosial-media a{
+  text-decoration: none;
+}
+.fa-instagram{
+  color: #ffffff;
+  transition: 0.3s;
+  border: 2px solid #ffffff;
+  background: transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 30px;
+}
+
+.fa-instagram:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 15px white;
+    color: black;
+    background-color: #ffffff;
+}
+.fa-tiktok{
+   color: #ffffff;
+   transition: 0.3s;
+    border: 2px solid #ffffff;
+    background: transparent;
+    border-radius: 50%;
+
+}
+.fa-tiktok:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 15px white;
+    color: black;
+    background-color: #ffffff;
+}
+@media (max-width: 768px) {
+  .home-content {
+    display: flex;
+    flex-direction: column; /* MEMBUAT ELEMEN TURUN KE BAWAH */
+    align-items: center;    /* Membuat posisi gambar & teks di tengah */
+    text-align: center;     /* Membuat teks rata tengah agar rapi di HP */
+    padding: 20px;
+    margin-left: 0;
+  }
+}
+
+
+/*Animasi*/
+.fade{
+  animation: faderight 3s 1;
+}
+
+@keyframes faderight{
+  0%{
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeleft{
+   0%{
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes oscillate{
+  0%, 100%{
+    transform: translateY(12px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+ 
+}
+
+@keyframes fadein{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/* Skill */
+.skil-seaction{
+  justify-content: center;
+  padding-top: 100px;
+}
+.skil-seaction h1{
+  color: white;
+  text-shadow: 0 0 15px white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.main-skill{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+  animation: animasi 10s 1;
+  animation-timeline: view();
+}
+
+@keyframes animasi{
+  0%{
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.skil-left {
+  color: white;
+  text-align: left;
+  margin-left: 45px;
+  
+}
+.skil-left h3{
+  text-align: center;
+}
+.skil-bar{
+  margin-bottom: 2.3rem;
+  margin-left: 10px;
+}
+.skil-left .skil-bar .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.skil-left .skil-bar .bar{
+  width: 100%;
+  height: 10px;
+  background-color: grey;
+  border-radius: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.skil-bar .bar span{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(to left, #2F2FE4, darkblue);
+  border-radius: 25px;
+  box-shadow: 0 0 20px #2F2FE4;
+}
+
+.skil-bar .bar .canva{
+  width: 90%;
+  animation: canva 2s;
+}
+
+.skil-bar .bar .capcut{
+  width: 80%;
+  animation: capcut 3s;
+}
+
+.skil-bar .bar .am{
+  width: 85%;
+  animation: am 4s;
+}
+
+.skil-bar .bar .ibis{
+  width: 70%;
+  animation: ibis 5s;
+}
+
+.skil-bar .bar .design{
+  width: 94%;
+  animation: design 6s;
+}
+
+@keyframes canva{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%;
+  }
+}
+
+@keyframes capcut{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+}
+
+@keyframes am{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 85%;
+  }
+}
+
+@keyframes ibis{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
+
+@keyframes design{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 94%;
+  }
+}
+
+
+.skil-right h3{
+  color:white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.show-more{
+  text-align: center;
+}
+.show-more a{
+text-decoration: none;
+color: white;
+width: 1px;
+padding: 10px;
+border: 1px solid white;
+border-radius: 45px;
+}
+/*skil logo*/
+/* Mengatur wadah utama agar membagi logo menjadi 2 di atas, 2 di bawah */
+.skil-logo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom sama rata */
+  gap: 45px; /* Jarak antar logo */
+  justify-items: center; /* Membuat logo berada di posisi tengah kolom */
+  align-items: center;
+  max-width: 250px; /* Membatasi lebar agar pas di layar HP dan otomatis membagi 2x2 */
+  margin: 0 auto; /* Membuat posisi grid logo berada di tengah */
+}
+
+/* Mengatur ukuran semua logo agar sama kecil dan proporsional */
+.skil-logo img {
+  width: 75px; /* Ukuran lebar logo, silakan ganti angkanya jika kurang kecil/besar */
+  height: 75px; /* Disamakan dengan width agar bentuknya kotak sempurna */
+  object-fit: contain; /* Memastikan gambar tidak gepeng atau distorsi */
+  border-radius: 12px; /* Membuat sudut logo sedikit melengkung rapi */
+  transition: 0.3s;
+}
+
+.skil-logo img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  box-shadow: 0 0 15px #2F2FE4;
+}
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 3, 1fr;
+    gap: 10px;
+    row-gap: 40px;
+    padding: 20px;
+    animation: animasi 10s 1;
+    animation-timeline: view();
+}
+
+.gallery-grid img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    border: 2px solid white;
+}
+
+.folder{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 150px;
+}
+
+
+/* Form Contact */
+form {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-bg{
+  padding: 25px;
+   background-color: #2626265b;
+   box-shadow: 0 0 10px black;
+   backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+input, textarea {
+    padding: 10px;
+    border: none;
+    background-color: rgb(71, 71, 71);
+    border-radius: 10px;
+    color: rgb(233, 233, 233);
+}
+textarea{
+  box-sizing: border-box;
+  max-width: 100%;
+  resize: vertical;
+}
+form p {
+  color: white;
+  text-align: left;
+}
+.sumbit {
+    padding: 10px;
+    background: linear-gradient(to right, blue, darkblue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sumbit:hover {
+  transform: scale(1.01);
+    background: linear-gradient(to left,blue, darkblue);
+    box-shadow: 0 0 5px #0000ff;
+    text-shadow: 0 0 15px white;
+}
+
+footer{
+    background-color: #0b0b33;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    color: white;
+    padding: 45px;
+    width: 100%;
+    text-align: center;
+}
+/* Scroll Top Button */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    background: linear-gradient(to bottom, #0e0e44, #2F2FE4);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+}
+.fa-solid{
+  font-size: 20px;
+}
+
+/* Modal Gallery */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+
+
+.modal-content {
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    display: block;
+    animation: zoom 0.5s;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+
+@keyframes zoom{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}
+.close {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover{
+  color: #0000ff;
+}
